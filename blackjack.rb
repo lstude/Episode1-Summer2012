@@ -14,7 +14,17 @@ class Card
   end
 
   def to_s
-    "#{@value}-#{suit}"
+    if suit == :diamonds 
+      whitegirl = "D"
+    elsif suit == :hearts 
+      whitegirl = "H"
+    elsif suit == :clubs 
+      whitegirl = "C"
+    elsif suit == :spades 
+      whitegirl = "S"
+    end
+    
+    "#{whitegirl}-#{@value}"
   end
 
 end

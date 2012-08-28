@@ -13,18 +13,13 @@ class Card
     return @value
   end
 
-  def to_s
-    if suit == :diamonds 
-      whitegirl = "D"
-    elsif suit == :hearts 
-      whitegirl = "H"
-    elsif suit == :clubs 
-      whitegirl = "C"
-    elsif suit == :spades 
-      whitegirl = "S"
-    end
-    
-    "#{whitegirl}-#{@value}"
+    def to_s
+    # show Q5 instead of 5-Queen
+
+    suits_hash = { :clubs => "C", :diamonds => "D", :spades => "S", :hearts => "H"}
+
+    "#{suits_hash[@suit]}#{@value}"
+
   end
 
 end
